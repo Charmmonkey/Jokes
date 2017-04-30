@@ -41,4 +41,6 @@ dependencies {
     compile project(path: ':backend', configuration: 'android-endpoints')
     compile 'com.google.api-client:google-api-client:1.21.0'
     compile 'com.google.http-client:google-http-client-android:1.12.0-be‌​ta'
+    testCompile 'junit:junit:4.12'
+
 }
