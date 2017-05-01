@@ -30,7 +30,7 @@ public class MainActivityFragment extends Fragment implements AsyncResponse, Vie
     @Override
     public void processFinish(String result) {
         retrievedJoke = result;
-        
+
     }
 
     @Override
