@@ -10,27 +10,31 @@
     tools:context=".MainActivityFragment">
 
     <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:id="@+id/progress_bar"
-        style="?android:progressBarStyleSmall"/>
-
-    <TextView
-        android:id="@+id/instructions_text_view"
+        style="?android:progressBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/instructions" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions_text_view"
+        android:layout_centerInParent="true"
         android:onClick="tellJoke"
         android:text="@string/button_text"
 
         />
+
+    <TextView
+        android:id="@+id/instructions_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/instructions"
+        android:textAppearance="?android:textAppearanceLarge" />
+
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

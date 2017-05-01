@@ -17,3 +17,11 @@ allprojects {
         jcenter()
     }
 }
+
+project(':backend'){
+    task testGCE{
+        dependsOn "appengineRun"
+        dependsOn "test"
+        dependsOn "appengineStop"
+    }
+}

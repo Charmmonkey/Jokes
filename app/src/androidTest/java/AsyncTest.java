@@ -62,7 +62,7 @@ public class AsyncTest extends InstrumentationTestCase{
 
         @Override
         protected void onPostExecute(String result) {
-            assertEquals(result, "this is a joke");
+            assertNotNull(result);
         }
     }
 
