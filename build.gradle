@@ -18,10 +18,18 @@ allprojects {
     }
 }
 
-project(':backend'){
-    task testGCE{
-        dependsOn "appengineRun"
-        dependsOn "test"
-        dependsOn "appengineStop"
+task configuredGCETest {
+    dependsOn ":backend:appengineRun"
+    evaluationDependsOn ':backend'
+    project(':backend') {
+        appengine {
+            daemon true
+        }
     }
+    dependsOn ":app:test"
+    dependsOn ":backend:appengineStop"
+    doLast { println "Configured GCE test finished running" }
 }
+
+
+
