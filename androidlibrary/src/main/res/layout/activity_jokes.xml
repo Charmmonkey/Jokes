@@ -7,8 +7,9 @@
     tools:context="com.example.androidlibrary.JokesActivity">
 
     <TextView
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         tools:text="joke"
         android:id="@+id/jokes_view"
