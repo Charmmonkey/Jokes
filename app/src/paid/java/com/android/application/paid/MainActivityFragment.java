@@ -28,6 +28,8 @@ public class MainActivityFragment extends Fragment implements AsyncResponse, Vie
     @Override
     public void processFinish(String result) {
         retrievedJoke = result;
+        startJokesActivity();
+        progressBar.setVisibility(View.GONE);
 
     }
 
@@ -37,11 +39,6 @@ public class MainActivityFragment extends Fragment implements AsyncResponse, Vie
 
         JokesAsyncTask jokesAsyncTask = new JokesAsyncTask(this);
         jokesAsyncTask.execute();
-
-        startJokesActivity();
-        progressBar.setVisibility(View.GONE);
-
-
     }
 
     @Override

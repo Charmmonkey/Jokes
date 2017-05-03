@@ -36,6 +36,13 @@ public class MainActivityFragment extends Fragment implements AsyncResponse, Vie
     public void processFinish(String result) {
         retrievedJoke = result;
 
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+            Log.d("MainActivityFragment", "ad loaded");
+        }else{
+            startJokesActivity();
+            progressBar.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -44,13 +51,7 @@ public class MainActivityFragment extends Fragment implements AsyncResponse, Vie
 
         JokesAsyncTask jokesAsyncTask = new JokesAsyncTask(this);
         jokesAsyncTask.execute();
-
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-            Log.d("MainActivityFragment", "ad loaded");
-        }
-
-    }
+            }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
