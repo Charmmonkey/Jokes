@@ -1,4 +1,5 @@
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import com.udacity.gradle.builditbigger.AsyncResponse;
 import com.udacity.gradle.builditbigger.JokesAsyncTask;
@@ -18,6 +19,7 @@ public class AsyncTest implements AsyncResponse{
     @Override
     public void processFinish(String result) {
         testJoke = result;
+        Log.d("Test", testJoke);
         assertNotNull(testJoke);
 
     }
