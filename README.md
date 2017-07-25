@@ -1,4 +1,4 @@
-# Gradle for Android and Java Final Project
+# Jokes
 
 Jokes is a simple joke telling app with multiple build variants utilizing Google Cloud Endpoints. The app consists
 of four modules. A Java library that provides jokes, a Google Cloud Endpoints
