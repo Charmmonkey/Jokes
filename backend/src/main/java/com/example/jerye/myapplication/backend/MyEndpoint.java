@@ -33,7 +33,6 @@ public class MyEndpoint {
         MyBean response = new MyBean();
         Jokes jokes = new Jokes();
         response.setData(jokes.tellJoke());
-
         return response;
     }
 
